@@ -20,9 +20,9 @@ class TestMiddleware
         // dd($request);
         // dd(Auth::user()->role);
 
-        // if (Auth::user()->role != 'admin') {
-        //     return abort(404);
-        // }
+        if (Auth::user()->role != 'admin') {
+            return abort(404);
+        }
         echo '<h2 class="text-danger">From Test Middleware</h2>';
         return $next($request);
     }
