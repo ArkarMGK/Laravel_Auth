@@ -11,6 +11,7 @@
 <body>
     <h2>Home</h2>
     {{ Auth::user()->name }}
+    {{ Auth::user()->role }}
     <form action="{{ route('logout') }}" method="POST">
         @csrf
         <button>LOGOUT</button>
