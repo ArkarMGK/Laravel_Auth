@@ -10,6 +10,7 @@
 
 <body>
     <h2>Home</h2>
+    Currently logged in as...
     {{ Auth::user()->name }}
     {{ Auth::user()->role }}
     <form action="{{ route('logout') }}" method="POST">
