@@ -10,6 +10,7 @@
 
 <body>
     <h2>Home</h2>
+    Currently logged in as...
     {{ Auth::user()->name }}
     <form action="{{ route('logout') }}" method="POST">
         @csrf
